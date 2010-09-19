@@ -1,0 +1,70 @@
+<strong>Built-in functions</strong><br /><br />
+These functions display results in a user-friendly format directly in the console, and allow you to work further by clicking on the result actions. Mouseover the functions to see a short description, click to place in command editor.
+By default, they all work on the current (last) active database, collection and/or cursor. As the actions are mostly done asynchronously, the functions don't generally return
+any results as a variable. So, If you want to work with the results in your script, use the methods in built-in objects instead.
+<br />
+<br />
+
+<table>
+  <tr>
+    <td>
+<a href="#" onclick="fillCommand('connect(HOST, PORT);');"  title="Change the default database connection.">connect</a>(host, [port], [user], [pw])<br />
+<a href="#" onclick="fillCommand('showDatabases();');" title="Show a list of databases (identical to show('databases')).">showDatabases</a>()<br />
+<a href="#" onclick="fillCommand('selectDatabase(DBNAME);');"  title="Select a database for use (identical to use(dbname)).">selectDatabase</a>(dbname)<br />
+<a href="#" onclick="fillCommand('createDatabase(DBNAME);');"  title="Create a new database. If not specified, you will be prompted for a name.">createDatabase</a>([name])<br />
+<a href="#" onclick="fillCommand('show(\'databases\');');"  title="Possible values are 'databases', 'collections'.">show</a>(what)<br />
+<a href="#" onclick="fillCommand('use(DBNAME, COLLECTION);');"  title="Select a database and/or collection for use.">use</a>(dbname, [collname])<br />
+    </td>
+    <td>
+<a href="#" onclick="fillCommand('showDatabase();');" title="Show the database actions screen.">showDatabase</a>()<br />
+<a href="#" onclick="fillCommand('dropDatabase();');"  title="Drop the current database (use silent=true for no confirmation prompt).">dropDatabase</a>([silent])<br />
+<a href="#" onclick="fillCommand('repairDatabase();');"  title="Repair the current database.">repairDatabase</a>()<br />
+<a href="#" onclick="fillCommand('showCollections();');" title="Show a list of collections (identical to show('collections')).">showCollections</a>()<br />
+<a href="#" onclick="fillCommand('selectCollection(DBNAME, COLLNAME);');"  title="Select a collection for use (identical to use(dbname, collname)).">selectCollection</a>(dbname, collname)<br />
+<a href="#" onclick="fillCommand('createCollection(COLLNAME);');"  title="Create a new collection on the current database. If not specified, you will be prompted for a name.">createCollection</a>([name])<br />
+<a href="#" onclick="fillCommand('execute(CODE);');" title="Run code on the server.">execute</a>(code, [scope])<br />
+    </td>
+    <td>
+<a href="#" onclick="fillCommand('showCollection();');" title="Show the collection actions screen.">showCollection</a>()<br />
+<a href="#" onclick="fillCommand('dropCollection();');"  title="Drop the current collection (use silent=true for no confirmation).">dropCollection</a>([silent])<br /> 
+<a href="#" onclick="fillCommand('collectionCount();');"  title="Get the number of documents in the current collection.">collectionCount</a>()<br /> 
+<a href="#" onclick="fillCommand('find({});');"  title="Perform a query on the current collection and return a cursor.">find</a>(query, [fields])<br />
+<a href="#" onclick="fillCommand('findOne({});');"  title="Perform a query on the current collection and return a cursor.">findOne</a>(query, [fields])<br /> 
+<a href="#" onclick="fillCommand('insert({});');"  title="Insert data in to the current collection.">insert</a>(data, [safe])<br /> 
+<a href="#" onclick="fillCommand('update({}, {});');"  title="Update data in to the current collection.">update</a>(criteria, data, [options])<br /> 
+<a href="#" onclick="fillCommand('remove({}, true);');"  title="Remove data from the current collection.">remove</a>(criteria, [justone])<br /> 
+
+<a href="#" onclick="fillCommand('showIndexes();');" title="Show indexes in the current collection.">showIndexes</a>()<br />
+<a href="#" onclick="fillCommand('ensureIndex(FIELD);');"  title="Create an index on the current collection if it does not exist.">ensureIndex</a>(field)<br />
+<a href="#" onclick="fillCommand('deleteIndex(KEY);');" title="Delete index from the current collection.">deleteIndex</a>(key)<br />
+<a href="#" onclick="fillCommand('deleteIndexes;');" title="Delete all indexes from the current collection.">deleteIndexes</a>()<br />
+<a href="#" onclick="fillCommand('indexInfo();');" title="Show raw indexinfo of the current collection.">indexInfo</a>()<br />
+    </td>
+    <td>
+<a href="#" onclick="fillCommand('showCursor();');" title="Show the cursor actions screen for the specified or the current active cursor.">showCursor</a>([cursor])<br />
+<a href="#" onclick="fillCommand('results();');" title="Show the data returned by running the specified or the current active cursor.">results</a>([cursor])<br />
+<a href="#" onclick="fillCommand('count();');" title="Show the number of documents returned by running the specified or the current active cursor.">count</a>([cursor])<br />
+<a href="#" onclick="fillCommand('limit(1);');" title="Set the limit value for the specified or the current active cursor.">limit</a>(value, [cursor])<br />
+<a href="#" onclick="fillCommand('skip(1);');" title="Set the skip value for the specified or the current active cursor.">skip</a>(value, [cursor])<br />
+<a href="#" onclick="fillCommand('sort(KEYS);');" title="Set the sort keys for the specified or the current active cursor.">sort</a>(keys, [cursor])<br />
+<a href="#" onclick="fillCommand('validate();');" title="Validate the specified or the current active cursor query.">validate</a>([cursor])<br />
+<a href="#" onclick="fillCommand('explain();');" title="Explain the specified or the current active cursor query.">explain</a>([cursor])<br />
+    </td>
+    <td>
+<a href="#" onclick="fillCommand('help();');" title="Show the help screen.">help</a>()<br />
+<a href="#" onclick="fillCommand('showLibrary();');" title="Show the script library (if enabled).">showLibrary</a>()<br />
+<a href="#" onclick="fillCommand('clearScreen();');"  title="Clear the console screen.">clearScreen</a>()<br /> 
+<a href="#" onclick="fillCommand('print(VARIABLE);');"  title="Print a variable to the console (useful for custom Javascript code).">print</a>(variable)<br />
+<a href="#" onclick="fillCommand('error(DESCRIPTION);');" title="Report an error on the console.">error</a>(description)<br />
+<a href="#" onclick="fillCommand('readme();');" title="Show the readme screen.">readme</a>()<br />
+<a href="#" onclick="fillCommand('quickActions();');" title="Show the quick actions screen.">quickActions</a>()<br />
+<a href="#" onclick="fillCommand('licence();');" title="Show the licence screen.">licence</a>()<br />
+<a href="#" onclick="fillCommand('welcome();');" title="Show the welcome screen.">welcome</a>()<br />
+<a href="#" onclick="fillCommand('commandHistory();');" title="Show the command history screen or summon a specic history entry.">commandHistory</a>([index])<br />
+<a href="#" onclick="fillCommand('clearCommandHistory();');" title="Delete the command history from browser offline storage.">clearCommandHistory</a>()<br />
+<a href="#" onclick="fillCommand('fillCommand(COMMAND);');" title="Replace the command area with a new command string.">fillCommand</a>(commands)<br />
+<a href="#" onclick="fillCommand('runCommands();');" title="Run whatever there is on the command area.">runCommands</a>()<br />
+<a href="#" onclick="fillCommand('listMethods(PROTOTYPE);');" title="List the methods in a Javascript prototype.">listMethods</a>(prototype)<br />
+    </td>
+  </tr>
+</table>

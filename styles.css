@@ -1,0 +1,160 @@
+html, body, #main_table, tbody, #main {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+body {
+  background-color: #CCCCCC;
+}
+
+* {
+  font-family: monospace;
+  max-width: 100%;
+
+}
+
+a {
+  text-decoration: none;
+  color: #663366;
+ 
+  background-color: #EEEEAA;
+  border: 1px solid silver;
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-border-radius: 5px;
+}
+
+a:hover {
+  color: maroon;
+  background-color: #AAEEEE;
+}
+
+
+
+.ui_box {
+}
+.ui_button {
+  border: 1px solid gray;
+  padding: 5px;
+  -moz-border-radius: 7px;
+  background-color: #EEEEAA;
+  margin-bottom: 10px;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #663366;
+  font-weight: bold;
+}
+.ui_button:hover {
+  background-color: #AAEEEE;
+}
+
+#main {
+  height: 100%;
+}
+
+#main_top {
+  /* height: 100%; */
+  overflow: auto;
+}
+#main_grabble {
+  height: 1px;
+  overflow: hidden;
+  border-top: 2px dotted gray;
+  cursor: move;
+}
+#main_bottom {
+  height: 100%;
+}
+#bottom_table {
+  width: 100%;
+  height: 100%;
+}
+#main_input_cell, #main_actions_cell {
+  border: 1px solid gray;
+  padding: 20px;
+  -moz-border-radius: 10px;
+  background-color: #EEEEEE;
+}
+#main_input_cell {
+  padding: 4px;
+}
+#main_actions_cell {
+  width: 520px;
+}
+
+
+#main_input {
+  width: 100%;
+  height: 100%;
+}
+#main_console {
+  border: 1px solid gray;
+  -moz-border-radius: 7px;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+#main_details {
+  float: right;
+  color: gray;
+}
+
+#main_footer a {
+  color: gray;
+}
+#main_connection {
+}
+
+.result {
+  border: 1px solid gray;
+  padding: 20px;
+  -moz-border-radius: 10px;
+  background-color: #EEEEEE;
+  margin-bottom: 4px;
+  overflow: auto;
+  margin: 5px;
+}
+
+.result strong {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #336666;
+}
+
+.login {
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 20px;
+  width: 260px;
+  -moz-border-radius: 10px;
+  background-color: #EEEEEE;
+}
+.login span {
+  color: gray;
+  text-transform: lowercase;
+}
+.login_pass, .login_user {
+  border: 1px solid gray;
+  margin: 5px;
+}
+.login .ui_button {
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

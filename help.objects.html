@@ -1,0 +1,29 @@
+<strong>Built-in objects (experimental)</strong><br /><br />
+Use these for advanced data manipulation or reporting with Javascript. The methods in the database objects generally take a callback (cb)
+function as an argument (at least when the method needs to talk to the database), and executes it asynchronously with the raw JSON data. Use print() to display progress information or results from the callback.
+Naturally, you have the full power of Javascript and your browser's built-in API's. Click the object name to get a command that can show the available object methods and a usage example.
+<br />
+<br />
+<table>
+  <tr>
+    <td><a href="#" onclick="fillCommand('listMethods(Mongo.prototype);\nmongo.getDatabases(function(databases) {\n  print(databases);\n});');">mongo</a></td><td>Reference to the Mongo object.</td>
+  </tr>
+  <tr>
+    <td><a href="#" onclick="fillCommand('listMethods(MongoDB.prototype);\nif (db) {\n  print(db.getName()); \n}');">db</a></td><td>Reference to the currently selected MongoDB object (or null if none selected).</td>
+  </tr>
+  <tr>
+    <td><a href="#" onclick="fillCommand('listMethods(MongoDBCollection.prototype);\nif (db) {\n  print(coll.getName());\n  coll.findOne(function(results) {\n    print(results);\n  }); \n}');">coll</a></td><td>Reference to the currently selected MongoDBCollection object (or null if none selected).</td>
+  </tr>
+  <tr>
+    <td><a href="#" onclick="fillCommand('listMethods(MongoCursor.prototype);\nif (coll) {\n  var mycursor = coll.find({});\n  mycursor.count(function(result) { alert(result); });\n}');">cursor</a></td><td>Reference to the latest MongoCursor object. (or null if none).</td>
+  </tr>
+  <tr>
+    <td><a href="#" onclick="fillCommand('listMethods(MongoId.prototype);\nfind({_id: new MongoId(IDSTRING)});\nresults();');">MongoId</a></td><td>MongoId object (create with new MongoId(string))</td>
+  </tr>
+  <tr>
+    <td><a href="#" onclick="fillCommand('listMethods(MongoDate.prototype);\nfind({start: new MongoDate(new Date())});\nresults();');">MongoDate</a></td><td>MongoDate object (create with new MongoDate([seconds|javascript date object]))</td>
+  </tr>
+</table>
+<br />
+<br />
+

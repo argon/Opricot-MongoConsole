@@ -141,7 +141,7 @@ proto.processReturnData = function(data) {
   if (data && typeof(data) == "object") {
     for(var key in data) {
       var val = data[key];
-      if (val["type"] == "object") {
+      if (val !== null && val["type"] == "object") {
         if (val["cls"] == "MongoId") {
           data[key] = new MongoId("" + val["val"]);
         }

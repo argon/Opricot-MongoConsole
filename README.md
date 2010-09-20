@@ -1,6 +1,6 @@
-README
+Opricot
+=======
 
---------------------------------------------------------------------------------
 Opricot is a hybrid GUI/CLI/JS web frontend implemented in PHP to manage 
 your MongoDB servers and databases. Use as a point-and-click adventure for basic 
 tasks, utilize scripting for automated processing or repetitive things. 
@@ -9,7 +9,7 @@ Our aim is to provide a snappy, fully featured alternative to the
 native MongoDB shell for database management, querying and manipulating data.
 
 It is released under the GNU General Public License, version 3. It also uses a
-third-party JSON library from http://www.JSON.org/ 
+third-party [JSON library](http://www.JSON.org/)
 
 Only Firefox 3.5 is supported, but should work on most modern browsers.
 
@@ -19,20 +19,16 @@ is entered through the commandline.
  
 Use at your own risk; this software may or may not work as advertised. 
 
-http://www.icmfinland.fi/oss/opricot/
 
-
-USAGE
-
---------------------------------------------------------------------------------
+Usage
+-----
 
 Usage documentation is incorporated directly in the software, so install and, 
 run it; you should be able to get started quite easily.
   
 
-INSTALLATION
-
---------------------------------------------------------------------------------
+Installation
+------------
 
 Copy the files somewhere under your webserver documentroot, that's it. 
 If you want, you may change the default MongoDB host and port from index.html.
@@ -45,9 +41,8 @@ Note that recent versions of MongoDB, PHP and PHP MongoDB driver
 must be properly set up.
 
 
-PRO-TIPS
-
---------------------------------------------------------------------------------
+Pro-Tips
+--------
 
 - Script library functionality allows you to store often used scripts
   or script templates in the database, and share them with other users.
@@ -84,9 +79,8 @@ PRO-TIPS
 
 
 
-CHANGELOG
-
---------------------------------------------------------------------------------
+Changelog
+---------
 
 v0.9.3a (2010-02-13)
    
@@ -101,31 +95,24 @@ v0.9.3a (2010-02-13)
 v0.9.2a (2010-02-02)
 
 - changed application name to "Opricot"
-
 - find results are shown in a user-friendly browser
   - added button to show all fields
   - added button to remove document
   - added button to fill command area with an update command template for the document
-
 - support MongoId type (use these classes in the javascript driver)
 - support MongoDate type (use these classes in the javascript driver)
 - all commands now wait for previous ajax requests to complete, so that all batch commands work on fresh data
-
 - added simple password protection (edit auth.php to enable and configure)
-
 - show connection details in window title
 - now shows databases by default when opening the application
 - size of command area can now be changed by dragging
 - simplified the help screen
 - lots of small css and ui fixes
-
 - works better with different screen resolutions and browser zoom
 - now seems to work also with IE8 (definitely not pretty, but works)
 - now seems to work also with Chromium browser (not very pretty, but works; should also apply to Google Chrome)
 - now seems to work also with Opera (not very pretty, but works)
-
 - now works also when PHP magic quotes are enabled
-
 - some more things i might have forgot to list
 
 
@@ -133,31 +120,37 @@ v0.9a (2010-01-02) - initial release
 
 
 
-FUTURE PLANS
+Future Plans
+------------
 
---------------------------------------------------------------------------------
+- prettier handling of errors from the ajax interface
+- mimic the json type style of mongo http interface http://www.mongodb.org/display/DOCS/Http+Interface
+- authentication support (managing users)
+- add ability to bookmark whatever is in the editor (url hash feature)
+- fix CSS to implement properly the screen-splitting (bottom fixed-sise)
+- group() support
+- incorporate our Formula -> MongoQuery conversion tool if possible
+- some find/query creation helper (maybe FormulaConverter would help)
+- GridFS support
+- DbRef support
+- Profiling level support
+- Export / import support
+- MongoCode support
+- store the last connected host and port in offline settings
+- store the last selected database and/or collection in offline settings
+- ability to highlight / collapse console results
+- prevent wide json strings from stretching UI bigger than screen
+- better formatting and UI in console results
+- support save() (this might not valid for AJAX frontend)
+- implement latest databases and collections history
 
-TODO: prettier handling of errors from the ajax interface
-TODO: mimic the json type style of mongo http interface http://www.mongodb.org/display/DOCS/Http+Interface
-TODO: authentication support (managing users)
-TODO: add ability to bookmark whatever is in the editor (url hash feature)
-TODO: fix CSS to implement properly the screen-splitting (bottom fixed-sise)
-TODO: group() support
-TODO: incorporate our Formula -> MongoQuery conversion tool if possible
-TODO: some find/query creation helper (maybe FormulaConverter would help)
-TODO: GridFS support
-TODO: DbRef support
-TODO: Profiling level support
-TODO: Export / import support
-TODO: MongoCode support
-TODO: store the last connected host and port in offline settings
-TODO: store the last selected database and/or collection in offline settings
-TODO: ability to highlight / collapse console results
-TODO: prevent wide json strings from stretching UI bigger than screen
-TODO: better formatting and UI in console results
-TODO: support save() (this might not valid for AJAX frontend)
-TODO: implement latest databases and collections history
+Credits
+-------
 
+Created by [Oy Information Chain Management Finland Ltd.](http://www.icmfinland.fi)
 
+Maintained by [Andrew Naylor](http://mphys.com).
 
+(c) 2010 by Oy Information Chain Management Finland Ltd.
+See LICENSE.txt for license
 

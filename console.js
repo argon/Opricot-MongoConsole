@@ -72,9 +72,8 @@ proto.runCommand = function(command) {
 proto.fillCommand = function(txt) {
   if (typeof(txt) == "function") {
     txt = "" + txt;
+    txt = txt.replace(/(function\s*\(.*\)\s*{|}\s*$)/gi,'');
     txt = txt.split("\n");
-    txt.pop();
-    txt.shift();
     for (var i = 0; i < txt.length; i++) {
       txt[i] = txt[i].replace(/^\s+|\s+$/g, '');
     }

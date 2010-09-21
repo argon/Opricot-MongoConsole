@@ -12,7 +12,7 @@ var showCollection = function(collection, _selected) {
   var item = jsconsole.createItem();
   item.addTitle("Collection " + collname + " in " + dbname + selected);
   item.addAction("select", function(val) { selectCollection(db.getName(), val); }, collname);
-  item.addAction("find", function() { selectCollection(dbname, collname, true); fillCommand(function() { find({"FIELD": "VALUE"}, ["FIELD"]); limit(10); results(); });  });
+  item.addAction("find", function() { selectCollection(dbname, collname, true); fillCommand(function() { find(); }); find(); });
   item.addAction("count", function(val) { selectCollection(db.getName(), val, true);  collectionCount(); }, collname);
   item.addAction("validate", function(val) { selectCollection(db.getName(), val, true);  collectionValidate(); }, collname);
   item.addAction("indexes", function(val) { selectCollection(db.getName(), val, true);  showIndexes(); }, collname);

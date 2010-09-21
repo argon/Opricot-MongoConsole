@@ -222,7 +222,7 @@
                   </div>
 
                   <div id="main_footer">
-                     Opricot v0.9.2a
+                     Opricot v0.9.3a
                   </div>
                 </div>
                 
